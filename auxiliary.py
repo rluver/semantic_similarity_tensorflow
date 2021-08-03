@@ -119,7 +119,7 @@ class BertSemanticDataGenerator(Sequence):
         
         input_id_array = pad_sequences(input_ids, maxlen = self.max_len, padding = 'post', dtype = 'int32')
         
-        return [input_id_array, input_mask_array, input_segment_array]
+        return [input_id_array, input_segment_array, input_mask_array]
     
         
 
