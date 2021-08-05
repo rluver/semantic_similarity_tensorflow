@@ -11,9 +11,14 @@ from model import semantic_similarity_model
 
 if __name__ == '__main__':
     
-    model = semantic_similarity_model(128).build_model('model')
+    max_len = 128
+    
+    model = semantic_similarity_model(max_len).build_model('model')
     model.load_weights('model/semantic_similarity')
     
     get_similarity = semantic_similarity(model)
     
-    get_similarity('안녕하세요 여러분', '반갑습니다')
+    sentence1 = ''
+    sentence2 = ''
+    
+    get_similarity(sentence1, sentence2)
